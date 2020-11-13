@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
-import { lighten, makeStyles } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
 import TableCell from '@material-ui/core/TableCell';
@@ -93,7 +93,7 @@ const headCells = [
   { id: 'km', numeric: true, disablePadding: false, label: 'KM' },
   { id: 'ano_fab', numeric: true, disablePadding: false, label: 'Ano Fabricação' },
   { id: 'ano_mod', numeric: true, disablePadding: false, label: 'Ano Modelo' },
-  { id: 'valor_venda', numeric: false, disablePadding: false, label: 'Valor Venda' },
+  { id: 'valor_venda', numeric: true, disablePadding: false, label: 'Valor Venda' },
   { id: 'revenda', numeric: false, disablePadding: false, label: 'Revenda' },
   { id: 'situacao', numeric: false, disablePadding: false, label: 'Situação' },
 ];
@@ -172,7 +172,7 @@ const EnhancedTableToolbar = (props) => {
       })}
     >
         <Typography className={classes.title} variant="h6" id="tableTitle" component="div">
-          <img src={logo} width="150px" />
+          <img src={logo} width="150px" alt="logo" />
         </Typography>
 
         <Typography className={classes.title} variant="h6" id="tableTitle" component="div">
@@ -315,13 +315,13 @@ export default function EnhancedTable() {
               {stableSort(rows, getComparator(order, orderBy))
                 .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
                 .map((row, index) => {
-                  const isItemSelected = isSelected(row.modelo);
+                  const isItemSelected = isSelected(row.chassi);
                   const labelId = `enhanced-table-checkbox-${index}`;
 
                   return (
                     <TableRow
                       hover
-                      onClick={(event) => handleClick(event, row.modelo)}
+                      onClick={(event) => handleClick(event, row.chassi)}
                       role="checkbox"
                       aria-checked={isItemSelected}
                       tabIndex={-1}
@@ -343,7 +343,7 @@ export default function EnhancedTable() {
                       <TableCell align="left">{row.km}</TableCell>
                       <TableCell align="left">{row.ano_fab}</TableCell>
                       <TableCell align="left">{row.ano_mod}</TableCell>
-                      <TableCell align="left">{row.valor_venda}</TableCell>
+                      <TableCell align="left">R${row.valor_venda}</TableCell>
                       <TableCell align="left">{row.revenda}</TableCell>
                       <TableCell align="left">{row.situacao}</TableCell>
                     </TableRow>
