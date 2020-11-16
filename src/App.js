@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from "react";
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
 import { makeStyles } from '@material-ui/core/styles';
@@ -20,12 +20,11 @@ import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Switch from '@material-ui/core/Switch';
 import AccountBox from '@material-ui/icons/AccountBox';
 import logo from './assets/grupo_lider.png';
+import api from './services/api';
 
-function createData(modelo, chassi, placa, cor, km, ano_fab, ano_mod, valor_venda, revenda, situacao) {
-  return { modelo, chassi, placa, cor, km, ano_fab, ano_mod, valor_venda, revenda, situacao };
-}
-
-const rows = [];
+// function createData(modelo, chassi, placa, cor, km, ano_fab, ano_mod, valor_venda, revenda, situacao) {
+//   return { modelo, chassi, placa, cor, km, ano_fab, ano_mod, valor_venda, revenda, situacao };
+// }
 
 // const rows = [
 //   createData('CITY LX CVT',	'93HGM6650FZ105440',	'PPD4969',	'CINZA', 50000,	2014,	2015,	'51.900,00', 'CVC CACHOEIRO', 'ESTOQUE'),
@@ -240,6 +239,13 @@ export default function EnhancedTable() {
   const [page, setPage] = React.useState(0);
   const [dense, setDense] = React.useState(false);
   const [rowsPerPage, setRowsPerPage] = React.useState(5);
+  const [rows, setRows] = React.useState([]);
+
+  useEffect(() => {
+    api.get("/").then((response) => {
+      setRows(response.data);
+    });
+  }, []);
 
   const handleRequestSort = (event, property) => {
     const isAsc = orderBy === property && order === 'asc';
@@ -330,12 +336,6 @@ export default function EnhancedTable() {
                       key={row.chassi}
                       selected={isItemSelected}
                     >
-                      <TableCell padding="checkbox">
-                        <Checkbox
-                          checked={isItemSelected}
-                          inputProps={{ 'aria-labelledby': labelId }}
-                        />
-                      </TableCell>
                       <TableCell component="th" id={labelId} scope="row" padding="none">
                         {row.modelo}
                       </TableCell>
