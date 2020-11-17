@@ -17,7 +17,8 @@ import IconButton from '@material-ui/core/IconButton';
 import Tooltip from '@material-ui/core/Tooltip';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Switch from '@material-ui/core/Switch';
-import AccountBox from '@material-ui/icons/AccountBox';
+import Sync from '@material-ui/icons/Sync';
+import Add from '@material-ui/icons/Add';
 import logo from './assets/grupo_lider.png';
 import api from './services/api';
 
@@ -132,9 +133,15 @@ const EnhancedTableToolbar = (props) => {
           ESTOQUE DE USADOS
         </Typography>
 
-        <Tooltip title="Meu Perfil">
-          <IconButton aria-label="filter list">
-            <AccountBox />
+        <Tooltip title="Adicionar Veículo">
+          <IconButton aria-label="add car">
+            <Add />
+          </IconButton>
+        </Tooltip>
+
+        <Tooltip title="Atualizar Estoque">
+          <IconButton aria-label="sync list">
+            <Sync />
           </IconButton>
         </Tooltip>
     </Toolbar>
@@ -148,6 +155,9 @@ EnhancedTableToolbar.propTypes = {
 const useStyles = makeStyles((theme) => ({
   root: {
     width: '100%',
+  },
+  container: {
+    maxHeight: 440,
   },
   paper: {
     width: '100%',
@@ -255,12 +265,13 @@ export default function EnhancedTable() {
     <div className={classes.root}>
       <Paper className={classes.paper}>
         <EnhancedTableToolbar numSelected={selected.length} />
-        <TableContainer>
+        <TableContainer className={classes.container}>
           <Table
             className={classes.table}
             aria-labelledby="tableTitle"
             size={dense ? 'small' : 'medium'}
-            aria-label="enhanced table"
+            stickyHeader
+            aria-label="sticky table"
           >
             <EnhancedTableHead
               classes={classes}
@@ -312,7 +323,7 @@ export default function EnhancedTable() {
           </Table>
         </TableContainer>
         <TablePagination
-          rowsPerPageOptions={[5, 10, 15]}
+          rowsPerPageOptions={[10, 20, 30, 40]}
           component="div"
           count={rows.length}
           rowsPerPage={rowsPerPage}
