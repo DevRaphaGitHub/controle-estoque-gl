@@ -61,7 +61,7 @@ const headCells = [
 ];
 
 function EnhancedTableHead(props) {
-  const { classes, onSelectAllClick, order, orderBy, numSelected, rowCount, onRequestSort } = props;
+  const { classes, order, orderBy, onRequestSort } = props;
   const createSortHandler = (property) => (event) => {
     onRequestSort(event, property);
   };
@@ -73,7 +73,6 @@ function EnhancedTableHead(props) {
           <TableCell
             key={headCell.id}
             align={headCell.numeric = 'left'}
-            padding={headCell.disablePadding ? 'none' : 'default'}
             sortDirection={orderBy === headCell.id ? order : false}
           >
             <TableSortLabel
@@ -289,7 +288,7 @@ export default function EnhancedTable() {
                       key={row.chassi}
                       selected={isItemSelected}
                     >
-                      <TableCell component="th" id={labelId} scope="row" padding="none">
+                      <TableCell component="th" id={labelId} scope="row">
                         {row.modelo}
                       </TableCell>
                       <TableCell align="left">{row.chassi}</TableCell>
