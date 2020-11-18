@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: "https://controle-estoque-gl-backend.herokuapp.com/",
+  baseURL: "http://10.6.2.15:3333/",
 });
 
 export default api;
