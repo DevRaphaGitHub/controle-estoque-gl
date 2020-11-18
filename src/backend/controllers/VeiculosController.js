@@ -1,5 +1,5 @@
 import express from 'express';
-import knex from '../database/connection.js';
+import knex from '../../../../controle-estoque-gl-backend/database/connection.js';
 
 class VeiculosController {
   async index(request, response) {
