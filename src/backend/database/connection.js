@@ -1,14 +1,12 @@
 import knex from 'knex';
+import path from 'path';
 
 const connection = knex({
-    client: 'mysql',
-    connection: {
-      host: '10.6.2.15',
-      user: 'root',
-      password: 'e3n1d7a9',
-      database: 'controle_estoque_gl'
-    },
-    useNullAsDefault: true,
+  client: 'sqlite3',
+  connection: {
+    filename: path.resolve(__dirname, 'database.sqlite')
+  },
+  useNullAsDefault: true
 });
 
 export default connection;
