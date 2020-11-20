@@ -1,7 +1,7 @@
 import express from 'express';
 import VeiculosController from './controllers/VeiculosController.js';
 
-const routes = express();
+const routes = express.Router();
 const veiculosController = new VeiculosController();
 
 // Listar veículos
