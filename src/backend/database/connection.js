@@ -8,7 +8,7 @@ const __dirname = path.dirname(__filename);
 const connection = knex({
   client: 'sqlite3',
   connection: {
-    filename: path.resolve(__dirname, 'database.sqlite')
+    __filename: path.resolve(__dirname, 'database.sqlite')
   },
   useNullAsDefault: true
 });
