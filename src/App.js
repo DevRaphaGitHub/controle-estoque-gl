@@ -286,11 +286,10 @@ export default function EnhancedTable() {
                     <TableRow
                       hover
                       onClick={(event) => handleClick(event, row.chassi)}
-                      role="checkbox"
                       aria-checked={isItemSelected}
                       tabIndex={-1}
                       key={row.chassi}
-                      selected={isItemSelected}
+                      // selected={isItemSelected}
                     >
                       <TableCell component="th" id={labelId} scope="row">
                         {row.modelo}
