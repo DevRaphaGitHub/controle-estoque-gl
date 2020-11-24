@@ -5,21 +5,9 @@
     "placa": "PPD4969",
     "cor": "CINZA",
     "km": 50000,
-    "ano_fab": 2015,
-    "ano_mod": 2014,
+    "ano_fab": 2014,
+    "ano_mod": 2015,
     "valor_venda": 51900,
-    "revenda": 4,
-    "situacao": "ES"
-  },
-  {
-    "modelo": "COBALT 1.8L LTZ",
-    "chassi": "9BGJC69Z0FB143794",
-    "placa": "PPB4004",
-    "cor": "BRANCO SUMMIT",
-    "km": 45000,
-    "ano_fab": 2015,
-    "ano_mod": 2014,
-    "valor_venda": 39900,
     "revenda": 4,
     "situacao": "ES"
   },
@@ -29,8 +17,8 @@
     "placa": "KPT9934",
     "cor": "BRANCA",
     "km": 0,
-    "ano_fab": 2014,
-    "ano_mod": 2013,
+    "ano_fab": 2013,
+    "ano_mod": 2014,
     "valor_venda": 49000,
     "revenda": 7,
     "situacao": "PD"
@@ -41,8 +29,8 @@
     "placa": "PPD4936",
     "cor": "PRATA",
     "km": 87000,
-    "ano_fab": 2015,
-    "ano_mod": 2014,
+    "ano_fab": 2014,
+    "ano_mod": 2015,
     "valor_venda": 49500,
     "revenda": 4,
     "situacao": "ES"
@@ -50,14 +38,14 @@
   {
     "modelo": "ECOSPORT FSL 1.6",
     "chassi": "9BFZE55P1C8746660",
-    "placa": "ODK1619",
+    "placa": "ODK1G19",
     "cor": "PRATA",
     "km": 95000,
     "ano_fab": 2012,
     "ano_mod": 2012,
     "valor_venda": 33637,
     "revenda": 7,
-    "situacao": "PD"
+    "situacao": "ES"
   },
   {
     "modelo": "ETIOS HB PLT15 AT",
@@ -65,8 +53,8 @@
     "placa": "PPU0016",
     "cor": "PRATA",
     "km": 77000,
-    "ano_fab": 2018,
-    "ano_mod": 2017,
+    "ano_fab": 2017,
+    "ano_mod": 2018,
     "valor_venda": 53900,
     "revenda": 4,
     "situacao": "ES"
@@ -77,8 +65,8 @@
     "placa": "OYD6873",
     "cor": "BRANCA",
     "km": 64000,
-    "ano_fab": 2014,
-    "ano_mod": 2013,
+    "ano_fab": 2013,
+    "ano_mod": 2014,
     "valor_venda": 24900,
     "revenda": 4,
     "situacao": "ES"
@@ -96,13 +84,37 @@
     "situacao": "ES"
   },
   {
+    "modelo": "FIESTA SEDAN 1.6 FLEX",
+    "chassi": "9BFZF54P7D8445908",
+    "placa": "ODT9435",
+    "cor": "PRATA",
+    "km": 74000,
+    "ano_fab": 2013,
+    "ano_mod": 2013,
+    "valor_venda": 28000,
+    "revenda": 7,
+    "situacao": "ES"
+  },
+  {
+    "modelo": "GOL 1.0 GIV",
+    "chassi": "9BWAA05WXCP002421",
+    "placa": "OCW9G66",
+    "cor": "BRANCA",
+    "km": 184000,
+    "ano_fab": 2011,
+    "ano_mod": 2012,
+    "valor_venda": 22000,
+    "revenda": 4,
+    "situacao": "ES"
+  },
+  {
     "modelo": "GOL SPECIAL",
     "chassi": "9BWAA45U2GP503055",
     "placa": "PPH8313",
     "cor": "BRANCA",
     "km": 38662,
-    "ano_fab": 2016,
-    "ano_mod": 2015,
+    "ano_fab": 2015,
+    "ano_mod": 2016,
     "valor_venda": 34500,
     "revenda": 7,
     "situacao": "ES"
@@ -113,23 +125,11 @@
     "placa": "QRC1474",
     "cor": "BRANCA",
     "km": 17000,
-    "ano_fab": 2018,
-    "ano_mod": 2017,
+    "ano_fab": 2017,
+    "ano_mod": 2018,
     "valor_venda": 61900,
     "revenda": 4,
     "situacao": "ES"
-  },
-  {
-    "modelo": "HONDA HR-V EX CVT",
-    "chassi": "93HRV2850GZ106439",
-    "placa": "PPG4I34",
-    "cor": "CINZA",
-    "km": 67000,
-    "ano_fab": 2016,
-    "ano_mod": 2015,
-    "valor_venda": 69800,
-    "revenda": 7,
-    "situacao": "PD"
   },
   {
     "modelo": "HYUNDAI HB20 1.6",
@@ -137,23 +137,35 @@
     "placa": "PPN4200",
     "cor": "PRETA",
     "km": 51000,
-    "ano_fab": 2016,
-    "ano_mod": 2015,
+    "ano_fab": 2015,
+    "ano_mod": 2016,
     "valor_venda": 48000,
     "revenda": 7,
     "situacao": "ES"
   },
   {
     "modelo": "KA SE 1.0 HA  B",
-    "chassi": "9BFZH55L7J8062181",
-    "placa": "LMM1196",
-    "cor": "BRANCA",
-    "km": 87000,
-    "ano_fab": 2018,
+    "chassi": "9BFZH55L8H8388758",
+    "placa": "PPP8117",
+    "cor": "VERMELHA",
+    "km": 58000,
+    "ano_fab": 2016,
     "ano_mod": 2017,
     "valor_venda": 38000,
     "revenda": 7,
     "situacao": "PD"
+  },
+  {
+    "modelo": "KA SE 1.0 HA  B",
+    "chassi": "9BFZH55L7J8062181",
+    "placa": "LMM1B96",
+    "cor": "BRANCA",
+    "km": 87000,
+    "ano_fab": 2017,
+    "ano_mod": 2018,
+    "valor_venda": 38000,
+    "revenda": 7,
+    "situacao": "ES"
   },
   {
     "modelo": "KA SE 1.0 HATCH",
@@ -164,18 +176,6 @@
     "ano_fab": 2015,
     "ano_mod": 2015,
     "valor_venda": 33000,
-    "revenda": 7,
-    "situacao": "ES"
-  },
-  {
-    "modelo": "KA SE 1.0 HATCH",
-    "chassi": "9BFZH55L3G8340731",
-    "placa": "PPN8526",
-    "cor": "PRATA",
-    "km": 35818,
-    "ano_fab": 2016,
-    "ano_mod": 2016,
-    "valor_venda": 34000,
     "revenda": 7,
     "situacao": "ES"
   },
@@ -197,21 +197,9 @@
     "placa": "PPV0170",
     "cor": "BRANCO SUMMIT",
     "km": 80000,
-    "ano_fab": 2018,
-    "ano_mod": 2017,
+    "ano_fab": 2017,
+    "ano_mod": 2018,
     "valor_venda": 40900,
-    "revenda": 4,
-    "situacao": "ES"
-  },
-  {
-    "modelo": "ONIX 1.4 MT LTZ",
-    "chassi": "9BGKT48L0EG240527",
-    "placa": "OVL4972",
-    "cor": "PRATA",
-    "km": 92000,
-    "ano_fab": 2014,
-    "ano_mod": 2013,
-    "valor_venda": 39900,
     "revenda": 4,
     "situacao": "ES"
   },
@@ -221,8 +209,8 @@
     "placa": "OYD8535",
     "cor": "PRETA",
     "km": 45000,
-    "ano_fab": 2014,
-    "ano_mod": 2013,
+    "ano_fab": 2013,
+    "ano_mod": 2014,
     "valor_venda": 39900,
     "revenda": 4,
     "situacao": "ES"
@@ -233,8 +221,8 @@
     "placa": "PPM0A25",
     "cor": "BRANCA",
     "km": 80000,
-    "ano_fab": 2016,
-    "ano_mod": 2015,
+    "ano_fab": 2015,
+    "ano_mod": 2016,
     "valor_venda": 34000,
     "revenda": 7,
     "situacao": "ES"
@@ -242,7 +230,7 @@
   {
     "modelo": "PALIO FIRE FLEX",
     "chassi": "9BD17164G85214667",
-    "placa": "MSC2746",
+    "placa": "MSC2H46",
     "cor": "VERMELHA",
     "km": 96000,
     "ano_fab": 2008,
@@ -253,13 +241,13 @@
   },
   {
     "modelo": "PRISMA 1.4MT LT",
-    "chassi": "9BGKS69V0JG355027",
-    "placa": "PPY1571",
-    "cor": "CINZA",
-    "km": 51255,
-    "ano_fab": 2018,
+    "chassi": "9BGKS69V0JG235979",
+    "placa": "OYF0622",
+    "cor": "BRANCA",
+    "km": 58600,
+    "ano_fab": 2017,
     "ano_mod": 2018,
-    "valor_venda": 48500,
+    "valor_venda": 48900,
     "revenda": 4,
     "situacao": "ES"
   },
@@ -297,7 +285,7 @@
     "ano_mod": 2018,
     "valor_venda": 143580,
     "revenda": 7,
-    "situacao": "PD"
+    "situacao": "ES"
   },
   {
     "modelo": "RANGER LTD CD4",
@@ -305,11 +293,11 @@
     "placa": "PPK5E77",
     "cor": "BRANCO",
     "km": 130000,
-    "ano_fab": 2017,
-    "ano_mod": 2016,
+    "ano_fab": 2016,
+    "ano_mod": 2017,
     "valor_venda": 135000,
     "revenda": 7,
-    "situacao": "PD"
+    "situacao": "ES"
   },
   {
     "modelo": "SIENA ATTRACTIV 1.4",
@@ -317,11 +305,11 @@
     "placa": "PPC0170",
     "cor": "BRANCA",
     "km": 155000,
-    "ano_fab": 2016,
-    "ano_mod": 2015,
+    "ano_fab": 2015,
+    "ano_mod": 2016,
     "valor_venda": 26000,
     "revenda": 8,
-    "situacao": "PD"
+    "situacao": "ES"
   },
   {
     "modelo": "SIENA EL 1.4 FLEX",
@@ -329,8 +317,8 @@
     "placa": "OVF7468",
     "cor": "BRANCA",
     "km": 47000,
-    "ano_fab": 2014,
-    "ano_mod": 2013,
+    "ano_fab": 2013,
+    "ano_mod": 2014,
     "valor_venda": 31900,
     "revenda": 4,
     "situacao": "ES"
@@ -344,6 +332,18 @@
     "ano_fab": 2001,
     "ano_mod": 2001,
     "valor_venda": 44000,
+    "revenda": 4,
+    "situacao": "ES"
+  },
+  {
+    "modelo": "SONIC LTZ NB AT",
+    "chassi": "KL1JM5C06CB096685",
+    "placa": "OMD3619",
+    "cor": "VERMELHA",
+    "km": 80000,
+    "ano_fab": 2012,
+    "ano_mod": 2012,
+    "valor_venda": 31900,
     "revenda": 4,
     "situacao": "ES"
   },
@@ -365,8 +365,8 @@
     "placa": "PPT2445",
     "cor": "PRETA",
     "km": 32000,
-    "ano_fab": 2018,
-    "ano_mod": 2017,
+    "ano_fab": 2017,
+    "ano_mod": 2018,
     "valor_venda": 78500,
     "revenda": 8,
     "situacao": "ES"
