@@ -8,8 +8,8 @@
     "ano_fab": 2014,
     "ano_mod": 2015,
     "valor_venda": 51900,
-    "revenda": 4,
-    "situacao": "ES"
+    "revenda": "CVC CACHOEIRO",
+    "situacao": "ESTOQUE"
   },
   {
     "modelo": "CRUZE LT HB",
@@ -20,8 +20,8 @@
     "ano_fab": 2013,
     "ano_mod": 2014,
     "valor_venda": 49000,
-    "revenda": 7,
-    "situacao": "PD"
+    "revenda": "BRACOM CACHOEIRO",
+    "situacao": "TRÂNSITO"
   },
   {
     "modelo": "ECOSPORT FSL 1.6",
@@ -32,8 +32,8 @@
     "ano_fab": 2014,
     "ano_mod": 2015,
     "valor_venda": 49500,
-    "revenda": 4,
-    "situacao": "ES"
+    "revenda": "CVC CACHOEIRO",
+    "situacao": "ESTOQUE"
   },
   {
     "modelo": "ECOSPORT FSL 1.6",
@@ -44,8 +44,8 @@
     "ano_fab": 2012,
     "ano_mod": 2012,
     "valor_venda": 33637,
-    "revenda": 7,
-    "situacao": "ES"
+    "revenda": "BRACOM CACHOEIRO",
+    "situacao": "ESTOQUE"
   },
   {
     "modelo": "ETIOS HB PLT15 AT",
@@ -56,8 +56,8 @@
     "ano_fab": 2017,
     "ano_mod": 2018,
     "valor_venda": 53900,
-    "revenda": 4,
-    "situacao": "ES"
+    "revenda": "CVC CACHOEIRO",
+    "situacao": "ESTOQUE"
   },
   {
     "modelo": "FIESTA FLEX",
@@ -68,8 +68,8 @@
     "ano_fab": 2013,
     "ano_mod": 2014,
     "valor_venda": 24900,
-    "revenda": 4,
-    "situacao": "ES"
+    "revenda": "CVC CACHOEIRO",
+    "situacao": "ESTOQUE"
   },
   {
     "modelo": "FIESTA HA 1.6L TI A",
@@ -80,8 +80,8 @@
     "ano_fab": 2015,
     "ano_mod": 2015,
     "valor_venda": 41500,
-    "revenda": 7,
-    "situacao": "ES"
+    "revenda": "BRACOM CACHOEIRO",
+    "situacao": "ESTOQUE"
   },
   {
     "modelo": "FIESTA SEDAN 1.6 FLEX",
@@ -92,8 +92,8 @@
     "ano_fab": 2013,
     "ano_mod": 2013,
     "valor_venda": 28000,
-    "revenda": 7,
-    "situacao": "ES"
+    "revenda": "BRACOM CACHOEIRO",
+    "situacao": "ESTOQUE"
   },
   {
     "modelo": "GOL 1.0 GIV",
@@ -104,8 +104,8 @@
     "ano_fab": 2011,
     "ano_mod": 2012,
     "valor_venda": 22000,
-    "revenda": 4,
-    "situacao": "ES"
+    "revenda": "CVC CACHOEIRO",
+    "situacao": "ESTOQUE"
   },
   {
     "modelo": "GOL SPECIAL",
@@ -116,8 +116,8 @@
     "ano_fab": 2015,
     "ano_mod": 2016,
     "valor_venda": 34500,
-    "revenda": 7,
-    "situacao": "ES"
+    "revenda": "BRACOM CACHOEIRO",
+    "situacao": "ESTOQUE"
   },
   {
     "modelo": "HB20 1.6A PREM",
@@ -128,8 +128,8 @@
     "ano_fab": 2017,
     "ano_mod": 2018,
     "valor_venda": 61900,
-    "revenda": 4,
-    "situacao": "ES"
+    "revenda": "CVC CACHOEIRO",
+    "situacao": "ESTOQUE"
   },
   {
     "modelo": "HYUNDAI HB20 1.6",
@@ -140,8 +140,8 @@
     "ano_fab": 2015,
     "ano_mod": 2016,
     "valor_venda": 48000,
-    "revenda": 7,
-    "situacao": "ES"
+    "revenda": "BRACOM CACHOEIRO",
+    "situacao": "ESTOQUE"
   },
   {
     "modelo": "KA SE 1.0 HA  B",
@@ -152,8 +152,8 @@
     "ano_fab": 2016,
     "ano_mod": 2017,
     "valor_venda": 38000,
-    "revenda": 7,
-    "situacao": "PD"
+    "revenda": "BRACOM CACHOEIRO",
+    "situacao": "TRÂNSITO"
   },
   {
     "modelo": "KA SE 1.0 HA  B",
@@ -164,8 +164,8 @@
     "ano_fab": 2017,
     "ano_mod": 2018,
     "valor_venda": 38000,
-    "revenda": 7,
-    "situacao": "ES"
+    "revenda": "BRACOM CACHOEIRO",
+    "situacao": "ESTOQUE"
   },
   {
     "modelo": "KA SE 1.0 HATCH",
@@ -176,8 +176,8 @@
     "ano_fab": 2015,
     "ano_mod": 2015,
     "valor_venda": 33000,
-    "revenda": 7,
-    "situacao": "ES"
+    "revenda": "BRACOM CACHOEIRO",
+    "situacao": "ESTOQUE"
   },
   {
     "modelo": "ONIX 1.0MT LS",
@@ -188,8 +188,8 @@
     "ano_fab": 2016,
     "ano_mod": 2016,
     "valor_venda": 35000,
-    "revenda": 4,
-    "situacao": "ES"
+    "revenda": "CVC CACHOEIRO",
+    "situacao": "ESTOQUE"
   },
   {
     "modelo": "ONIX 1.4 MT LT",
@@ -200,8 +200,8 @@
     "ano_fab": 2017,
     "ano_mod": 2018,
     "valor_venda": 40900,
-    "revenda": 4,
-    "situacao": "ES"
+    "revenda": "CVC CACHOEIRO",
+    "situacao": "ESTOQUE"
   },
   {
     "modelo": "ONIX 1.4 MT LTZ",
@@ -212,8 +212,8 @@
     "ano_fab": 2013,
     "ano_mod": 2014,
     "valor_venda": 39900,
-    "revenda": 4,
-    "situacao": "ES"
+    "revenda": "CVC CACHOEIRO",
+    "situacao": "ESTOQUE"
   },
   {
     "modelo": "PALIO ATTRACT 1.4",
@@ -224,8 +224,8 @@
     "ano_fab": 2015,
     "ano_mod": 2016,
     "valor_venda": 34000,
-    "revenda": 7,
-    "situacao": "ES"
+    "revenda": "BRACOM CACHOEIRO",
+    "situacao": "ESTOQUE"
   },
   {
     "modelo": "PALIO FIRE FLEX",
@@ -236,8 +236,8 @@
     "ano_fab": 2008,
     "ano_mod": 2008,
     "valor_venda": 16000,
-    "revenda": 7,
-    "situacao": "ES"
+    "revenda": "BRACOM CACHOEIRO",
+    "situacao": "ESTOQUE"
   },
   {
     "modelo": "PRISMA 1.4MT LT",
@@ -248,8 +248,8 @@
     "ano_fab": 2017,
     "ano_mod": 2018,
     "valor_venda": 48900,
-    "revenda": 4,
-    "situacao": "ES"
+    "revenda": "CVC CACHOEIRO",
+    "situacao": "ESTOQUE"
   },
   {
     "modelo": "PRISMA 1.4MT LT",
@@ -260,8 +260,8 @@
     "ano_fab": 2014,
     "ano_mod": 2014,
     "valor_venda": 41900,
-    "revenda": 4,
-    "situacao": "ES"
+    "revenda": "CVC CACHOEIRO",
+    "situacao": "ESTOQUE"
   },
   {
     "modelo": "RANGER CD LTD 4X4 3.2",
@@ -272,8 +272,8 @@
     "ano_fab": 2016,
     "ano_mod": 2016,
     "valor_venda": 114000,
-    "revenda": 7,
-    "situacao": "ES"
+    "revenda": "BRACOM CACHOEIRO",
+    "situacao": "ESTOQUE"
   },
   {
     "modelo": "RANGER LTD CD 4A 32 C",
@@ -284,8 +284,8 @@
     "ano_fab": 2018,
     "ano_mod": 2018,
     "valor_venda": 143580,
-    "revenda": 7,
-    "situacao": "ES"
+    "revenda": "BRACOM CACHOEIRO",
+    "situacao": "ESTOQUE"
   },
   {
     "modelo": "RANGER LTD CD4",
@@ -296,8 +296,8 @@
     "ano_fab": 2016,
     "ano_mod": 2017,
     "valor_venda": 135000,
-    "revenda": 7,
-    "situacao": "ES"
+    "revenda": "BRACOM CACHOEIRO",
+    "situacao": "ESTOQUE"
   },
   {
     "modelo": "SIENA ATTRACTIV 1.4",
@@ -308,8 +308,8 @@
     "ano_fab": 2015,
     "ano_mod": 2016,
     "valor_venda": 26000,
-    "revenda": 8,
-    "situacao": "ES"
+    "revenda": "CVC GUAÇUÍ",
+    "situacao": "ESTOQUE"
   },
   {
     "modelo": "SIENA EL 1.4 FLEX",
@@ -320,8 +320,8 @@
     "ano_fab": 2013,
     "ano_mod": 2014,
     "valor_venda": 31900,
-    "revenda": 4,
-    "situacao": "ES"
+    "revenda": "CVC CACHOEIRO",
+    "situacao": "ESTOQUE"
   },
   {
     "modelo": "SILVERADO D20",
@@ -332,8 +332,8 @@
     "ano_fab": 2001,
     "ano_mod": 2001,
     "valor_venda": 44000,
-    "revenda": 4,
-    "situacao": "ES"
+    "revenda": "CVC CACHOEIRO",
+    "situacao": "ESTOQUE"
   },
   {
     "modelo": "SONIC LTZ NB AT",
@@ -344,8 +344,8 @@
     "ano_fab": 2012,
     "ano_mod": 2012,
     "valor_venda": 31900,
-    "revenda": 4,
-    "situacao": "ES"
+    "revenda": "CVC CACHOEIRO",
+    "situacao": "ESTOQUE"
   },
   {
     "modelo": "SPIN 1.8L AT ACT",
@@ -356,8 +356,8 @@
     "ano_fab": 2016,
     "ano_mod": 2016,
     "valor_venda": 47000,
-    "revenda": 8,
-    "situacao": "ES"
+    "revenda": "CVC GUAÇUÍ",
+    "situacao": "ESTOQUE"
   },
   {
     "modelo": "TRACKER 1.4 PREMIER TURBO ECOTEC",
@@ -368,7 +368,7 @@
     "ano_fab": 2017,
     "ano_mod": 2018,
     "valor_venda": 78500,
-    "revenda": 8,
-    "situacao": "ES"
+    "revenda": "CVC GUAÇUÍ",
+    "situacao": "ESTOQUE"
   }
 ]
