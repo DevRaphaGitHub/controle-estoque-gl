@@ -20,7 +20,6 @@ import Switch from '@material-ui/core/Switch';
 import Sync from '@material-ui/icons/Sync';
 import Add from '@material-ui/icons/Add';
 import logo from './assets/grupo_lider.png';
-import api from './services/api';
 
 function descendingComparator(a, b, orderBy) {
   if (b[orderBy] < a[orderBy]) {
@@ -201,13 +200,7 @@ export default function EnhancedTable() {
   const [page, setPage] = React.useState(0);
   const [dense, setDense] = React.useState(false);
   const [rowsPerPage, setRowsPerPage] = React.useState(10);
-  const [rows, setRows] = React.useState([]);
-
-  useEffect(() => {
-    api.get("/").then((response) => {
-      setRows(response.data);
-    });
-  }, []);
+  const rows = require('./database.json');
 
   const handleRequestSort = (event, property) => {
     const isAsc = orderBy === property && order === 'asc';
