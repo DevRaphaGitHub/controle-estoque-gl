@@ -1,11 +1,17 @@
 import express from 'express';
-import cors from 'cors';
 import routes from './routes.js';
+import path from 'path';
 
 const app = express();
 
-app.use(cors());
+const PORT = process.env.PORT || 3333;
+
+const buildPath = path.join(__dirname, '..', 'build');
+app.use(express.static(buildPath));
+
 app.use(express.json());
 app.use(routes);
 
-app.listen(3333);
+app.listen(PORT, () => {
+  console.log(`Servidor iniciado na porta ${PORT}`);
+});
