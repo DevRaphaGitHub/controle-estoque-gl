@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+
+// Tabela
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
 import { makeStyles } from '@material-ui/core/styles';
@@ -16,6 +18,16 @@ import Paper from '@material-ui/core/Paper';
 import IconButton from '@material-ui/core/IconButton';
 import Tooltip from '@material-ui/core/Tooltip';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
+
+// Diálogo
+import Button from '@material-ui/core/Button';
+import TextField from '@material-ui/core/TextField';
+import Dialog from '@material-ui/core/Dialog';
+import DialogActions from '@material-ui/core/DialogActions';
+import DialogContent from '@material-ui/core/DialogContent';
+import DialogTitle from '@material-ui/core/DialogTitle';
+
+// Ícones
 import Switch from '@material-ui/core/Switch';
 import Sync from '@material-ui/icons/Sync';
 import Add from '@material-ui/icons/Add';
@@ -108,6 +120,9 @@ const useToolbarStyles = makeStyles((theme) => ({
   root: {
     paddingLeft: theme.spacing(2),
     paddingRight: theme.spacing(1),
+    '& .MuiTextField-root': {
+      margin: theme.spacing(1),
+    },
   },
   title: {
     flex: '1 1 100%',
@@ -117,6 +132,15 @@ const useToolbarStyles = makeStyles((theme) => ({
 const EnhancedTableToolbar = (props) => {
   const classes = useToolbarStyles();
   const { numSelected } = props;
+  const [open, setOpen] = React.useState(false);
+
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
 
   return (
     <Toolbar
@@ -133,10 +157,34 @@ const EnhancedTableToolbar = (props) => {
         </Typography>
 
         <Tooltip title="Adicionar Veículo">
-          <IconButton aria-label="add car">
+          <IconButton aria-label="add car" onClick={handleClickOpen}>
             <Add />
           </IconButton>
         </Tooltip>
+
+        <Dialog className={classes.root} open={open} onClose={handleClose} aria-labelledby="form-dialog-title">
+          <DialogTitle id="form-dialog-title">Adicionar Veículo</DialogTitle>
+          <DialogContent>
+            <TextField autoFocus margin="dense" id="modelo" label="Modelo" />
+            <TextField autoFocus margin="dense" id="chass" label="Chassi" />
+            <TextField autoFocus margin="dense" id="placa" label="Placa" />
+            <TextField autoFocus margin="dense" id="cor" label="Cor" />
+            <TextField autoFocus margin="dense" id="km" label="KM" />
+            <TextField autoFocus margin="dense" id="ano_fab" label="Ano Fabricação" />
+            <TextField autoFocus margin="dense" id="ano_mod" label="Ano Modelo" />
+            <TextField autoFocus margin="dense" id="valor_venda" label="Valor Venda" />
+            <TextField autoFocus margin="dense" id="revenda" label="Revenda" />
+            <TextField autoFocus margin="dense" id="situacao" label="Situação" />
+          </DialogContent>
+          <DialogActions>
+            <Button onClick={handleClose} color="primary">
+              SAIR
+            </Button>
+            <Button onClick={handleClose} color="primary">
+              SALVAR
+            </Button>
+          </DialogActions>
+        </Dialog>
 
         <Tooltip title="Atualizar Estoque">
           <IconButton aria-label="sync list">
