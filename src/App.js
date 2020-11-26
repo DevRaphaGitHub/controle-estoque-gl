@@ -27,6 +27,12 @@ import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import MenuItem from '@material-ui/core/MenuItem';
+import InputAdornment from '@material-ui/core/InputAdornment';
+import CircularProgress from '@material-ui/core/CircularProgress';
+import { green } from '@material-ui/core/colors';
+import Fab from '@material-ui/core/Fab';
+import CheckIcon from '@material-ui/icons/Check';
+import SaveIcon from '@material-ui/icons/Save';
 
 // Ícones
 import Switch from '@material-ui/core/Switch';
@@ -121,13 +127,40 @@ const useToolbarStyles = makeStyles((theme) => ({
   root: {
     paddingLeft: theme.spacing(2),
     paddingRight: theme.spacing(1),
-    '& .MuiTextField-root': {
-      margin: theme.spacing(1),
-    },
   },
   title: {
     flex: '1 1 100%',
   },
+  dialog: {
+    '& .MuiTextField-root': {
+      margin: theme.spacing(1),
+    },
+  },
+  wrapper: {
+    margin: 15,
+    position: 'relative',
+  },
+  buttonSuccess: {
+    backgroundColor: green[500],
+    '&:hover': {
+      backgroundColor: green[700],
+    },
+  },
+  fabProgress: {
+    color: green[500],
+    position: 'absolute',
+    top: -6,
+    left: -6,
+    zIndex: 1,
+  },
+  buttonProgress: {
+    color: green[500],
+    position: 'absolute',
+    top: '50%',
+    left: '50%',
+    marginTop: -12,
+    marginLeft: -12,
+  }
 }));
 
 const EnhancedTableToolbar = (props) => {
@@ -136,9 +169,15 @@ const EnhancedTableToolbar = (props) => {
   const [open, setOpen] = React.useState(false);
   const [revenda, setRevenda] = React.useState('CVC CACHOEIRO');
   const [situacao, setSituacao] = React.useState('ESTOQUE');
+  const [loading, setLoading] = React.useState(false);
+  const [success, setSuccess] = React.useState(false);
+  const timer = React.useRef();
   const inputYear = { maxlength: 4 };
   const inputPlaca = { maxlength: 7 };
   const inputChassi = { maxlength: 17 };
+  const [values, setValues] = React.useState({
+    valor: '',
+  });
   const revendas = [
     { value: 'CVC CACHOEIRO', label: 'CVC CACHOEIRO' },
     { value: 'CVC GUAÇUÍ', label: 'CVC GUAÇUÍ' },
@@ -148,6 +187,32 @@ const EnhancedTableToolbar = (props) => {
     { value: 'ESTOQUE', label: 'ESTOQUE' },
     { value: 'TRÂNSITO', label: 'TRÂNSITO' }
   ];
+
+  const buttonClassname = clsx({
+    [classes.buttonSuccess]: success,
+  });
+
+  React.useEffect(() => {
+    return () => {
+      clearTimeout(timer.current);
+    };
+  }, []);
+
+  const handleButtonClickSave = () => {
+    if (!loading) {
+      setSuccess(false);
+      setLoading(true);
+      timer.current = window.setTimeout(() => {
+        setSuccess(true);
+        setLoading(false);
+        setOpen(false);
+      }, 2000);
+    }
+  };
+
+  const handleChangeValue = (prop) => (event) => {
+    setValues({ ...values, [prop]: event.target.value });
+  };
 
   const handleChangeRevenda = (event) => {
     setRevenda(event.target.value);
@@ -159,6 +224,7 @@ const EnhancedTableToolbar = (props) => {
 
   const handleClickOpen = () => {
     setOpen(true);
+    setSuccess(false);
   };
 
   const handleClose = () => {
@@ -185,7 +251,7 @@ const EnhancedTableToolbar = (props) => {
           </IconButton>
         </Tooltip>
 
-        <Dialog className={classes.root} open={open} onClose={handleClose} aria-labelledby="form-dialog-title">
+        <Dialog className={classes.dialog} open={open} onClose={handleClose} aria-labelledby="form-dialog-title">
           <DialogTitle id="form-dialog-title">Adicionar Veículo</DialogTitle>
           <DialogContent>
             <TextField autoFocus margin="dense" id="modelo" label="Modelo" />
@@ -207,7 +273,17 @@ const EnhancedTableToolbar = (props) => {
               id="year" 
               label="Ano Modelo" 
             />
-            <TextField margin="dense" type={'number'} id="valor_venda" label="Valor Venda" />
+            <TextField 
+              margin="dense" 
+              type={'number'}
+              value={values.valor}
+              onChange={handleChangeValue('valor')}
+              InputProps={{
+                startAdornment: <InputAdornment position="start">R$</InputAdornment>,
+              }}
+              id="valor_venda" 
+              label="Valor Venda" 
+            />
             <TextField 
               select 
               value={revenda}
@@ -241,9 +317,17 @@ const EnhancedTableToolbar = (props) => {
             <Button onClick={handleClose} color="primary">
               SAIR
             </Button>
-            <Button onClick={handleClose} color="primary">
-              SALVAR
-            </Button>
+            <div className={classes.wrapper}>
+              <Fab
+                aria-label="save"
+                color="primary"
+                className={buttonClassname}
+                onClick={handleButtonClickSave}
+              >
+                {success ? <CheckIcon /> : <SaveIcon />}
+              </Fab>
+              {loading && <CircularProgress size={68} className={classes.fabProgress} />}
+            </div>
           </DialogActions>
         </Dialog>
 
