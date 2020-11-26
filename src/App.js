@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 
 // Tabela
 import PropTypes from 'prop-types';
@@ -26,6 +26,7 @@ import Dialog from '@material-ui/core/Dialog';
 import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogTitle from '@material-ui/core/DialogTitle';
+import MenuItem from '@material-ui/core/MenuItem';
 
 // Ícones
 import Switch from '@material-ui/core/Switch';
@@ -133,6 +134,28 @@ const EnhancedTableToolbar = (props) => {
   const classes = useToolbarStyles();
   const { numSelected } = props;
   const [open, setOpen] = React.useState(false);
+  const [revenda, setRevenda] = React.useState('CVC CACHOEIRO');
+  const [situacao, setSituacao] = React.useState('ESTOQUE');
+  const inputYear = { maxlength: 4 };
+  const inputPlaca = { maxlength: 7 };
+  const inputChassi = { maxlength: 17 };
+  const revendas = [
+    { value: 'CVC CACHOEIRO', label: 'CVC CACHOEIRO' },
+    { value: 'CVC GUAÇUÍ', label: 'CVC GUAÇUÍ' },
+    { value: 'BRACOM CACHOEIRO', label: 'BRACOM CACHOEIRO' }
+  ];
+  const situacoes = [
+    { value: 'ESTOQUE', label: 'ESTOQUE' },
+    { value: 'TRÂNSITO', label: 'TRÂNSITO' }
+  ];
+
+  const handleChangeRevenda = (event) => {
+    setRevenda(event.target.value);
+  };
+
+  const handleChangeSituacao = (event) => {
+    setSituacao(event.target.value);
+  };
 
   const handleClickOpen = () => {
     setOpen(true);
@@ -166,15 +189,53 @@ const EnhancedTableToolbar = (props) => {
           <DialogTitle id="form-dialog-title">Adicionar Veículo</DialogTitle>
           <DialogContent>
             <TextField autoFocus margin="dense" id="modelo" label="Modelo" />
-            <TextField autoFocus margin="dense" id="chass" label="Chassi" />
-            <TextField autoFocus margin="dense" id="placa" label="Placa" />
-            <TextField autoFocus margin="dense" id="cor" label="Cor" />
-            <TextField autoFocus margin="dense" id="km" label="KM" />
-            <TextField autoFocus margin="dense" id="ano_fab" label="Ano Fabricação" />
-            <TextField autoFocus margin="dense" id="ano_mod" label="Ano Modelo" />
-            <TextField autoFocus margin="dense" id="valor_venda" label="Valor Venda" />
-            <TextField autoFocus margin="dense" id="revenda" label="Revenda" />
-            <TextField autoFocus margin="dense" id="situacao" label="Situação" />
+            <TextField margin="dense" id="chassi" inputProps={inputChassi} label="Chassi" />
+            <TextField margin="dense" id="placa" inputProps={inputPlaca} label="Placa" />
+            <TextField margin="dense" id="cor" label="Cor" />
+            <TextField margin="dense" type={'number'} id="km" label="KM" />
+            <TextField 
+              margin="dense" 
+              type={'tel'} 
+              inputProps={inputYear}
+              id="year" 
+              label="Ano Fabricação" 
+            />
+            <TextField 
+              margin="dense" 
+              type={'tel'} 
+              inputProps={inputYear}
+              id="year" 
+              label="Ano Modelo" 
+            />
+            <TextField margin="dense" type={'number'} id="valor_venda" label="Valor Venda" />
+            <TextField 
+              select 
+              value={revenda}
+              onChange={handleChangeRevenda} 
+              margin="dense" 
+              id="revenda" 
+              label="Revenda"
+            >
+              {revendas.map((option) => (
+                <MenuItem key={option.value} value={option.value}>
+                  {option.label}
+                </MenuItem>
+              ))}
+            </TextField>
+            <TextField 
+              select 
+              value={situacao}
+              onChange={handleChangeSituacao} 
+              margin="dense" 
+              id="situacao" 
+              label="Situação"
+            >
+              {situacoes.map((option) => (
+                <MenuItem key={option.value} value={option.value}>
+                  {option.label}
+                </MenuItem>
+              ))}
+            </TextField>
           </DialogContent>
           <DialogActions>
             <Button onClick={handleClose} color="primary">
@@ -246,7 +307,7 @@ export default function EnhancedTable() {
   const [orderBy, setOrderBy] = React.useState('modelo');
   const [selected, setSelected] = React.useState([]);
   const [page, setPage] = React.useState(0);
-  const [dense, setDense] = React.useState(false);
+  const [dense, setDense] = React.useState(true);
   const [rowsPerPage, setRowsPerPage] = React.useState(10);
   const rows = require('./database.json');
 
