@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 // Tabela
 import PropTypes from 'prop-types';
@@ -166,16 +166,16 @@ const useToolbarStyles = makeStyles((theme) => ({
 const EnhancedTableToolbar = (props) => {
   const classes = useToolbarStyles();
   const { numSelected } = props;
-  const [open, setOpen] = React.useState(false);
-  const [revenda, setRevenda] = React.useState('CVC CACHOEIRO');
-  const [situacao, setSituacao] = React.useState('ESTOQUE');
-  const [loading, setLoading] = React.useState(false);
-  const [success, setSuccess] = React.useState(false);
-  const timer = React.useRef();
+  const [open, setOpen] = useState(false);
+  const [revenda, setRevenda] = useState('CVC CACHOEIRO');
+  const [situacao, setSituacao] = useState('ESTOQUE');
+  const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState(false);
+  const timer = useRef();
   const inputYear = { maxlength: 4 };
   const inputPlaca = { maxlength: 7 };
   const inputChassi = { maxlength: 17 };
-  const [values, setValues] = React.useState({
+  const [values, setValues] = useState({
     valor: '',
   });
   const revendas = [
@@ -192,7 +192,7 @@ const EnhancedTableToolbar = (props) => {
     [classes.buttonSuccess]: success,
   });
 
-  React.useEffect(() => {
+  useEffect(() => {
     return () => {
       clearTimeout(timer.current);
     };
@@ -387,12 +387,12 @@ const useStyles = makeStyles((theme) => ({
 
 export default function EnhancedTable() {
   const classes = useStyles();
-  const [order, setOrder] = React.useState('asc');
-  const [orderBy, setOrderBy] = React.useState('modelo');
-  const [selected, setSelected] = React.useState([]);
-  const [page, setPage] = React.useState(0);
-  const [dense, setDense] = React.useState(true);
-  const [rowsPerPage, setRowsPerPage] = React.useState(10);
+  const [order, setOrder] = useState('asc');
+  const [orderBy, setOrderBy] = useState('modelo');
+  const [selected, setSelected] = useState([]);
+  const [page, setPage] = useState(0);
+  const [dense, setDense] = useState(true);
+  const [rowsPerPage, setRowsPerPage] = useState(10);
   const rows = require('./database.json');
 
   const handleRequestSort = (event, property) => {
